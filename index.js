@@ -7,6 +7,14 @@ app.get('/', function (req, res) {
  res.send('hello awesome');
 });
 //listen to port 3000 by default
-app.listen(process.env.PORT || 3000);
+var port = process.env.PORT || 3000
+var server = app.listen(port, () => {
+    console.log('App listening on port ', port);
+});
+
+function stop() {
+    server.close();
+}
  
 module.exports = app;
+module.exports.stop = stop;
