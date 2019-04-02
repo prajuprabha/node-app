@@ -3,9 +3,9 @@
 ssh ubuntu@172.31.34.244<<EOF
     cd ~/node-app
     git pull origin master
-    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-    source ~/.profile
-    nvm install v10.15.3
+    sudo apt-get install curl python-software-properties
+    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+    sudo apt-get install nodejs
     npm install
     npm install -g nodemon pm2
     pm2 restart ecosystem.config.js
