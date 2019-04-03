@@ -9,7 +9,7 @@ describe('node-app', () => {
     describe('GET /', function() {
         it('respond with Welcome to Jenkins', (done) => {
             //navigate to root and check the response is "hello world"
-            request(app).get('/').expect('hello anjireddy').end(done);
+            request(app).get('/').expect('Welcome to Jenkins').end(done);
         });
     });
 })
