@@ -7,9 +7,9 @@ describe('node-app', () => {
     })
 
     describe('GET /', function() {
-        it('respond with Welcome to Jenkins', (done) => {
+        it('respond with Piedistrict Private Limited is a Start-up Technology Development Centre for projects in Middle East, Europe and United States.', (done) => {
             //navigate to root and check the response is "hello world"
-            request(app).get('/').expect('Welcome to Jenkins').end(done);
+            request(app).get('/').expect('Piedistrict Private Limited is a Start-up Technology Development Centre for projects in Middle East, Europe and United States.').end(done);
         });
     });
 })
