@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
  res.send('Piedistrict Private Limited Middle East, Europe and United States.');
 });
 //listen to port 3000 by default
-var port = process.env.PORT || 3000
+var port = process.env.PORT || 80
 var server = app.listen(port, () => {
     console.log('App listening on port ', port);
 });
