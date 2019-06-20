@@ -1,5 +1,8 @@
 #!/bin/sh
 ssh ubuntu@172.31.95.112 <<EOF
+ cd backup/
+ rm -rf node-app/
+ cd
 cp -rvfp node-app/ backup/
     cd ~/node-app
     git pull origin master
