@@ -1,5 +1,6 @@
 #!/bin/sh
 ssh ubuntu@172.31.95.112 <<EOF
+cp -rvfp node-app/ backup/
     cd ~/node-app
     git pull origin master
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
